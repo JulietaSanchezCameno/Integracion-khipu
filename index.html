@@ -3,17 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Mi página de inicio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3ebf2;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 0.2em;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 0.8em 0;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 2em;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #c888d4;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #733add;
+        }
+    </style>
 </head>
 <body>
     <h1>¡Hola, bienvenidos!</h1>
-    <p>Esta es mi página de prueba para el proceso de selección en Khipu!</p>
+    <p>Esta es mi página de prueba para el proceso de selección en Khipu</p>
     <p>¡Gracias por visitarlo!</p>
-        <h2>Hacé tu pago más seguro con Khipu!</h2>
-    <form method="POST" action="https://khipu.com/api/1.3/createPaymentPage">
+        <h2>Hacé tu pago más seguro con Khipu</h2>
+    <form action="https://khipu.com/payment/process/TvE5G" method="POST">
         <input type="hidden" name="receiver_id" value="498276">
-        <input type="hidden" name="subject" value="Pago por servicio de asistente virtual">
-        <input type="hidden" name="body" value="Gracias por confiar en mi servicio. Este es un pago de ejemplo.">
-        <input type="hidden" name="amount" value="1500.00">
+        <input type="hidden" name="subject" value="Pago por servicio">
+        <input type="hidden" name="body" value="Gracias por confiar en mi!,Este es un pago de ejemplo.">
+        <input type="hidden" name="amount" value="1000.00">
         <input type="hidden" name="currency" value="ARS">
         <input type="hidden" name="transaction_id" value="transaccion-demo-123">
         <button type="submit">Pagar con Khipu</button>
