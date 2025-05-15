@@ -8,5 +8,16 @@
     <h1>¡Hola, bienvenidos!</h1>
     <p>Esta es mi página de prueba para el proceso de selección en Khipu!</p>
     <p>¡Gracias por visitarlo!</p>
+        <h2>Hacé tu pago más seguro con Khipu!</h2>
+    <form method="POST" action="https://khipu.com/api/1.3/createPaymentPage">
+        <input type="hidden" name="receiver_id" value="498276">
+        <input type="hidden" name="subject" value="Pago por servicio de asistente virtual">
+        <input type="hidden" name="body" value="Gracias por confiar en mi servicio. Este es un pago de ejemplo.">
+        <input type="hidden" name="amount" value="1500.00">
+        <input type="hidden" name="currency" value="CLP">
+        <input type="hidden" name="transaction_id" value="transaccion-demo-123">
+        <button type="submit">Pagar con Khipu</button>
+    </form>
+
 </body>
 </html>
